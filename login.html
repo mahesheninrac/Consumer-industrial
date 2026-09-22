@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in — EC Project Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-body">
+  <div class="auth-shell">
+
+    <!-- Left: brand / pitch panel -->
+    <div class="auth-visual">
+      <div class="hero-grid"></div>
+      <div class="hero-blob"></div>
+      <div class="brand">Eninrac<br><small>EC PROJECT EXPLORER</small></div>
+
+      <div class="pitch">
+        <h2>Welcome back to your EC workspace</h2>
+        <p>Log in to pick up where you left off — saved projects, watchlists and full clearance records.</p>
+        <ul class="auth-checklist">
+          <li><span class="tick">✓</span> Full baseline monitoring &amp; compliance data</li>
+          <li><span class="tick">✓</span> Save and organize projects into custom lists</li>
+          <li><span class="tick">✓</span> Every submitted document, one click away</li>
+        </ul>
+      </div>
+
+      <div class="foot-note">Data reproduced from MoEFCC Parivesh public EC filings.</div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="auth-form-panel">
+      <div class="auth-card">
+        <a class="back-link" href="ec-analytics.html">← Back to Projects</a>
+        <h1>Log in</h1>
+        <p class="sub">Enter your details to access your account.</p>
+
+        <button type="button" class="auth-oauth" id="googleBtn">
+          <svg width="16" height="16" viewBox="0 0 48 48">
+            <path fill="#FFC107"
+              d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34.5 5.5 29.6 3.5 24 3.5 12.7 3.5 3.5 12.7 3.5 24S12.7 44.5 24 44.5 44.5 35.3 44.5 24c0-1.2-.1-2.4-.3-3.5z" />
+            <path fill="#FF3D00"
+              d="m6.3 14.7 6.6 4.8C14.6 15.9 18.9 13 24 13c3.1 0 5.8 1.1 8 3l6-6C34.5 6.5 29.6 4.5 24 4.5c-7.6 0-14.1 4.3-17.4 10.6z" />
+            <path fill="#4CAF50"
+              d="M24 44.5c5.5 0 10.3-1.9 14-5.1l-6.5-5.5c-2.1 1.5-4.7 2.4-7.5 2.4-5.3 0-9.7-3.4-11.3-8.1l-6.6 5.1C9.9 40 16.4 44.5 24 44.5z" />
+            <path fill="#1976D2"
+              d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.7l6.5 5.5C41.9 35.9 44.5 30.4 44.5 24c0-1.2-.1-2.4-.3-3.5z" />
+          </svg>
+          Continue with Google
+        </button>
+        <div class="auth-divider">or log in with email</div>
+
+        <form id="loginForm" novalidate>
+          <div class="auth-field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+          </div>
+          <div class="auth-field">
+            <label for="password">Password</label>
+            <div class="pw-row">
+              <input type="password" id="password" name="password" placeholder="••••••••" required
+                autocomplete="current-password">
+              <button type="button" class="pw-toggle" id="pwToggle">Show</button>
+            </div>
+          </div>
+          <div class="auth-row-between">
+            <label><input type="checkbox" id="remember"> Remember me</label>
+            <a href="#" id="forgotLink">Forgot password?</a>
+          </div>
+          <button type="submit" class="auth-submit" id="submitBtn">Log in</button>
+          <div class="auth-status" id="statusBox"></div>
+        </form>
+
+        <p class="auth-demo-note">This is a demo form — no account is created or stored.</p>
+        <p class="auth-switch">Don't have an account? <a href="register.html">Register free</a></p>
+      </div>
+    </div>
+
+  </div>
+  <script src="auth.js" data-mode="login"></script>
+</body>
+
+</html>
